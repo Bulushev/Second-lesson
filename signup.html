@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/registration" method="post">
+            <label for="login">Логин</label>
+            <input type="email" id="login" name="login" placeholder="Введите почту" required/>
+            <label for="check-password">Пароль</label>
+            <input type="password" id="check-password" name="check-password" placeholder="Придумайте пароль" minlength="6"
+            maxlength="16" required>
+            <label for="password">Проверка пароля</label>
+            <input type="password" id="password" name="password" placeholder="Повторите пароль" minlength="6"
+            maxlength="16" required>
+            <label for="language">Выберите язык</label>
+            <select name="language" id="language">
+                <option value="ru">Русский</option>
+                <option value="by">Белорусский</option>
+            </select>
+            <button type="submit">Войти</button>
+        </form>
+        <a href="index.html">Авторизоваться</a>
+    </div>
+</body>
+
+</html>
