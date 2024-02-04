@@ -6,23 +6,32 @@
 }
 
 .wrapper {
-    display: grid;
+    display: flex;
     justify-content: center;
 }
 
 form {
     display: grid;
     grid-template-areas:
+        'label-login'
+        'login'
+        'label__password--check'
+        'check-password'
+        'label__password'
+        'password'
+        'label-language'
+        'language'
+        'button';
+    /* grid-template-areas:
         'label-login label-login'
         'login login'
         'label__password--check label__password--check'
         'check-password password'
         'label-language label-language'
         'language language'
-        'button button';
+        'button button'; */
     gap: 10px;
-    max-width: 350px;
-    width: 300%;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     background: #eee;
@@ -62,6 +71,10 @@ label {
     grid-area: check-password;
 }
 
+#label__password {
+    grid-area: label__password;
+}
+
 #password {
     grid-area: password;
 }
@@ -72,4 +85,29 @@ label {
 
 #language {
     grid-area: language;
+}
+
+@media screen and (min-width: 540px) {
+    form {
+        grid-template-areas:
+            'label-login label-login'
+            'login login'
+            'label__password--check label__password--check'
+            'check-password password'
+            'label-language label-language'
+            'language language'
+            'button button';
+        max-width: 500px;
+    }
+
+    #label__password {
+        grid-area: label__password;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    form {
+        gap: 20px;
+    }
 }
