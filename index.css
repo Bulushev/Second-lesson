@@ -5,23 +5,30 @@
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-content: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+        'label-login label-login'
+        'login login'
+        'label__password--check label__password--check'
+        'check-password password'
+        'label-language label-language'
+        'language language'
+        'button button';
     gap: 10px;
-    max-width: 250px;
-    width: 100%;
+    max-width: 350px;
+    width: 300%;
     padding: 10px;
     border-radius: 10px;
     background: #eee;
 }
 
-button {
+#button {
+    grid-area: button;
     padding: 7px;
     cursor: pointer;
 }
@@ -36,4 +43,32 @@ a {
 
 label {
     cursor: pointer;
+}
+
+#label__login {
+    grid-area: label-login;
+}
+
+#login {
+    grid-area: login;
+}
+
+#label__password--check {
+    grid-area: label__password--check;
+}
+
+#check-password {
+    grid-area: check-password;
+}
+
+#password {
+    grid-area: password;
+}
+
+#label__language {
+    grid-area: label-language;
+}
+
+#language {
+    grid-area: language;
 }
