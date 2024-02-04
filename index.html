@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
         <form action="/registration" method="post">
             <label for="login" id="label__login">Логин</label>
-            <input type="email" id="login" name="login" placeholder="Введите почту" required/>
+            <input type="email" id="login" name="login" placeholder="Введите почту" required />
             <label for="check-password" id="label__password--check">Пароль</label>
-            <input type="password" id="check-password" name="check-password" placeholder="Придумайте пароль" minlength="6"
-            maxlength="16" required>
+            <input type="password" id="check-password" name="check-password" placeholder="Придумайте пароль"
+                minlength="6" maxlength="16" required>
             <input type="password" id="password" name="password" placeholder="Повторите пароль" minlength="6"
-            maxlength="16" required>
+                maxlength="16" required>
             <label for="language" id="label__language">Выберите язык</label>
             <select name="language" id="language">
                 <option value="ru">Русский</option>
                 <option value="by">Белорусский</option>
             </select>
             <button type="submit" id="button">Войти</button>
+
         </form>
     </div>
 </body>
